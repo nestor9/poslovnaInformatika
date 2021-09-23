@@ -1,5 +1,5 @@
 package poslovnaInformatika.narodnaBanka.model;
 
-public class Proba2 {
-
+public enum TypeOfPartner {
+	ACTIVE, INACTIVE, 
 }
