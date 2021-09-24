@@ -1,0 +1,131 @@
+
+.top-bar{
+    padding: 10px 0;
+}
+
+a{
+    font-size: 14px;
+    color:#666
+}
+
+a:hover{
+    color: #000;
+}
+.phone-info{
+    float: left;
+}
+.login{
+    float: right;
+    text-transform: uppercase;
+}
+.report {
+    float: right;
+    text-transform: uppercase;
+    margin-right: 2%;
+}
+
+.navbar{
+    background-color: #fff;
+    margin-bottom: 0;
+    border: none;
+}
+.navbar-toggle{
+    float: left;
+    padding: 0;
+    margin:0;
+    margin-top: 17px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: none;
+    
+}
+
+.icon-bar {
+    width: 20px;
+    height: 6px;
+    border-radius: 2px;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    background-color: #000;
+    
+
+}
+
+.container {
+    position: relative;
+}
+.logo {
+    width: 58px;
+    margin-top: 17px;
+    margin-bottom: 0;
+    float: left;
+}
+.nav {
+    padding-bottom: 5px;
+}
+.nav li a {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    text-transform: uppercase;
+    display: inline-block;
+
+}
+nav li {
+    text-align: center;
+}
+nav:hover,nav:focus{
+    background-color: transparent;
+    border-bottom-color:#ACDACF;
+}
+nav .active a{
+    border-bottom: 2px solid #ACDACF;
+}
+
+@media (min-width:768px){
+    .top-bar a{
+        font-size: 16px;       
+    }
+}
+@media (min-width:768px){
+    .logo {
+        width: 80px;
+        margin-top: 10px;
+    }
+}
+@media (min-width:768px){
+    .nav {
+        padding-bottom: 0px;
+    }
+}
+@media (min-width:768px){
+    .nav li:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+@media (min-width:768px){
+    .navbar {
+        padding-top: 44px;
+        padding-bottom: 44px;
+        border-radius: 0px;
+        -webkit-border-radius:0px;
+        -moz-border-radius:0px;
+    }
+}
+
+@media (min-width:992px){
+    .nav{
+        padding-right: 190px;
+    }
+}
+@media (min-width:992px){
+    .nav li:last-child {
+        margin-right: 30px;
+    }
+}
+@media (min-width: 1200px){
+    .logo {
+        width: 104px;
+    }
+}

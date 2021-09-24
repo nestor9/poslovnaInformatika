@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <title>Salesystem NAJ</title>  
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"  type="text/css" href="css/main.css">
+  </head>
+  <body>  
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <a href="#" class="phone-info">+381 11 111 11 111</a>
+                
+                
+                  <button id="logout">Log out </button>
+            </div>
+        </div>
+        <!-- Top Bar END -->
+        
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="container">
+              <div id="menu" style="display:none;">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                  
+                </div>
+                <div class="collapse navbar-collapse" id="navigation">
+                    <nav>
+                        <ul class="nav navbar-nav navbar-right">
+                          <li><a href="users.html">Korisnici</a></li>
+                          <li><a href="pricelists.html">Cenovnici</a></li>
+                          <li><a href="partners.html">Partneri</a></li>
+                           <li><a href="rates.html">Stope PDV-a</a></li>
+                          <li><a href="addInvoice.html">Fakture</a></li>
+                           <li><a href="ReportInvoiceItem.html">Izvestaj faktura</a></li>
+                            <li><a href="Bookofoutgoinginvoice.html">Knjiga izlaznih faktura</a></li>
+                          <li><a href="services.html">Roba</a></li>
+                          <li><a href="enterprise1.html">Preduzeca</a></li>
+                        </ul>
+                    </nav>
+                </div>
+              </div> 
+              <!--login form -->
+              <div id="loginForm" hidden>
+                <div class="modal-dialog modal-dialog-scrollable" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group">
+                          <label for="username">Korisnicko ime</label>
+                          <input type="text" class="form-control"  id= "username" placeholder="">
+                        </div>
+                        <div class="form-group">
+                          <label for="password">Lozinka</label>
+                          <input type="password" class="form-control"  id= "password" placeholder="">
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" id="login" class="btn btn-primary">Log in</button>   
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar END -->
+
+    </header>
+    <!-- Main Header END -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/category.js"></script>
+		<script src="js/functions.js"></script>
+		
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet"  type="text/css" href="css/main.css">
+		
+		<script src="https://kit.fontawesome.com/9497a339e1.js" crossorigin="anonymous"></script>
+		
+		<title>PDV kategorije</title>
+		
+		<script>
+			$(document).ready(getCategory);
+		</script>		
+	</head>
+	
+	<body>
+	
+	<div class="container">	
+	
+			<!-- Toolbar -->	
+			<div class="toolbar">	
+				<button id="add" type="button" class="btn btn-outline-secondary">Dodaj</button>
+				<button id="edit" type="button" class="btn btn-outline-secondary">Izmeni</button>
+				<button id="delete" type="button" class="btn btn-outline-secondary">Obriši</button>
+			</div>
+			<!-- Toolbar END-->
+			
+			<!-- READ -->
+			<!-- Table -->
+			<table id="dataTable" class="table">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Naziv</th>
+					</tr>
+				</thead>
+				<tbody id="dataTableBody">
+				</tbody>
+			</table>
+			<!-- Table END-->
+			<!-- READ END-->
+			
+			
+			<!-- ADD -->
+			<div class="modal fade" id="addModalScrollable" tabindex="-1" role="dialog" aria-labelledby="addModalScrollableTitle" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-scrollable" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="addModalScrollableTitle">Dodavanje stope pdv-a</h5>
+			        <button type="button" class="close addModalClose" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        <form>
+					  <div class="form-group">
+					    <label for="procenatInput">Naziv</label>
+					    <input type="text" class="form-control" id="procenatInput" aria-describedby="procenatHelp" placeholder="Unesite naziv">
+					  </div>
+			
+					
+					</form>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary addModalClose" >Otkaži</button>
+			        <button type="button" id="doAdd" class="btn btn-primary">Sačuvaj</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- ADD END-->			
+			
+			<!-- EDIT -->
+			<div class="modal fade" id="updateModalScrollable" tabindex="-1" role="dialog" aria-labelledby="updateModalScrollableTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-scrollable" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="updateModalScrollableTitle">Izmena stope pdv-a</h5>
+							<button type="button" class="close updateModalClose" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<form>
+							<div class="form-group">
+							    <label for="stopaEditSelect">Izaberite kategoriju pdv-a</label>
+							    <select class="form-control"  id="stopaEditSelect">					    
+							    </select>
+							    <button id="fillOutRateFieldsEdit">Izaberi</button>
+							  </div>
+					  			<div class="form-group">
+					    			<label for="procenatIzmeniInput">Naziv</label>
+					    			<input type="text" class="form-control" id="procenatIzmeniInput" aria-describedby="procenatIzmeniHelp" placeholder="Unesite naziv">
+					  			</div>
+					  			
+					  			</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary updateModalClose">Otkaži</button>
+							<button type="button" id="doUpdate" class="btn btn-primary">Sačuvaj</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- EDIT END-->
+			
+			<!-- DELETE  -->
+			<div class="modal fade" id="deletePromptModal" tabindex="-1" role="dialog" aria-labelledby="deletePromptLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="deletePromptLabel">Jeste li sigurni?</h5>
+			        <button type="button" class="close deletePromptClose" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        <p id="deletePromptText"></p>
+			      </div>
+			      <div class="form-group">
+					 <label for="stopaDeleteSelect">Izaberite kategoriju pdv-a</label>
+					 <select class="form-control"  id="stopaDeleteSelect">					    
+					 </select>
+					</div>
+			      
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary deletePromptClose">Otkaži</button>
+			        <button type="button" id="doDelete" class="btn btn-primary">Obriši</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- DELETE END -->
+	
+	</div>
+	
+	</body>
+			
+</html>

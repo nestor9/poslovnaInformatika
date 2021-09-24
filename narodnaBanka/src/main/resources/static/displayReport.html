@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/displayreport.js"></script>
+		<script src="js/functions.js"></script>
+		
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet"  type="text/css" href="css/main.css">
+		
+		<script src="https://kit.fontawesome.com/9497a339e1.js" crossorigin="anonymous"></script>
+		
+		<title>Prikaz pojedinacnog izvestaja</title>
+		
+		<script>
+			$(document).ready(getDisplayID);
+		</script>
+	</head>
+	<body>
+	         <div class="row justify-content-md-center">
+          	<div class="col-md-5 mb-5">
+			  	<table class="table table-striped table-dark" id="tabelaIzvestaj"  style="cursor: pointer;">
+	 
+				</table>
+				 <button 
+                    onclick="fakturaIzvestaj()" 
+                    class="btn btn-secondary" 
+                    id="btnIzvestaj" 
+                    style=" margin-bottom: 10px;"
+                  >
+                          Štampaj fakturu
+                  </button>
+			</div>
+	<!--	<div id="reportTables" style=" margin: 5%;">
+        <div class="form-group">
+          <label><h1>Izvestaj:</h1></label>
+        </div>
+        <div class="form-group">
+          <label><b>Izvestaj:</b></label>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="kolicina">Kolicina</label>
+            <input type="text" class="form-control" id="kolicina" readonly>
+            <input type="hidden" class="form-control" id="idIzvestaja" readonly>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="popust">Popust</label>
+            <input type="text" class="form-control" id="popust" readonly>
+          </div>
+        </div>
+        <div class="form-group">
+          <label><b>Jedinicna cena:</b></label>
+          <input type="text" class="form-control" id="cena" readonly>
+        </div>
+         <div class="form-group">
+          <label><b>Osnovica pdv:</b></label>
+          <input type="text" class="form-control" id="osnovica" readonly>
+        </div>
+         <div class="form-group">
+          <label><b>Iznos pdv:</b></label>
+          <input type="text" class="form-control" id="pdv" readonly>
+        </div>
+        
+        <div class="form-row">
+          <div class="col-md-4 mb-4">
+            <label for="jedinicaMere">Ukupan iznos</label>
+            <input type="text" class="form-control" id="ukupaniznos" readonly>
+          </div>
+         
+          </div>-->
+				
+
+
+	</body>
+</html>

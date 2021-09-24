@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet"  type="text/css" href="css/main.css">
+		<script src="https://kit.fontawesome.com/9497a339e1.js" crossorigin="anonymous"></script>
+		<title>Dodavanje fakture</title>
+
+	</head>
+	<body>
+	
+	<div class="containter">
+			<a href="editInvoice.html">Izmena fakture</a>
+			<a href="deleteInvoice.html">Brisanje fakture</a>		
+			<div >
+			  <div class="modal-dialog modal-dialog-scrollable" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="addModalScrollableTitle">Dodavanje stavki fakture</h5>
+			      </div>
+			      <div class="modal-body">
+			        <form>
+					  <div class="form-group">
+					    <label for="partner-dropdown">Izaberite kupca</label>
+                        <select class="form-select" id="partner-dropdown" aria-label="">
+                        </select>
+					  </div>
+					  <div class="form-group">
+					    <label for="datumFakture">Izaberite datum fakture</label>
+                        <input type="date" id="datumFakture">
+					  </div>
+					  <div class="form-group">
+					    <label for="datumFakture">Izaberite datum valute</label>
+                        <input type="date" id="datumValute">
+					  </div>
+                      <div class="form-group">
+					    <label for="quantity">Kolicina</label>
+                        <input type="number" class="form-control" id= "quantity" placeholder="">
+                    </div>
+                      <div class="form-group">
+					    <label for="discount">Popust</label>
+                        <input type="number" class="form-control"  id= "discount" placeholder="">
+                    </div>
+                      <div class="form-group">
+					    <label for="unitPrice">Jedinicna cena</label>
+                        <input type="number" class="form-control"  id= "unitPrice" placeholder="">
+                    </div>
+                    <div class="form-group">
+					    <label for="pdvBase">PDV baza</label>
+                        <input type="number" class="form-control"  id= "pdvBase" placeholder="">
+                    </div>
+                    <div class="form-group">
+					    <label for="service-dropdown">Usluga</label>
+                        <select class="form-select" id="service-dropdown" aria-label="">
+                        </select>
+                        </div>
+					</form>
+			      </div>
+			      <div class="modal-footer">
+                    <button type="button" id="addInvoiceItem" class="btn btn-primary">Dodaj stavku fakture</button>   
+                    <button type="button" id="saveInvoice" class="btn btn-primary">Sacuvaj fakturu</button>
+					<button type="button" id="cancel" class="btn btn-primary">
+						<a href="index.html">Nazad</a>
+					</button>
+                </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- ADD END-->
+	</div>
+	<script src="js/invoices.js"></script>
+	</body>
+</html>

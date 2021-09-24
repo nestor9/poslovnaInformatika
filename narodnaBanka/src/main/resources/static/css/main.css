@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Istok+Web:400,700&display=swap&subset=latin-ext');
+@import "partials/global.css";
+@import "partials/header.css";
+@import "partials/pricelists.css";
+
+#invoiceBlock{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+}
+#service-dropdown{
+    width:265px;
+}
+
+#add-service-group-window{
+    visibility: hidden;
+}
+
+#delete-service-group-window{
+    visibility: hidden;
+}
+#edit-service-group-window{
+    visibility: hidden;
+}
+#add-service-window{
+    visibility: hidden;
+}
+#delete-service-window{
+    visibility: hidden;
+}
+#edit-service-window{
+    visibility: hidden;
+}
+#add-unit-window{
+    visibility: hidden;
+}
+#edit-unit-window{
+    visibility: hidden;
+}
+#delete-unit-window{
+    visibility: hidden;
+}

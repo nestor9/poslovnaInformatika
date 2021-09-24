@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/reportInvoice.js"></script>
+		<script src="js/functions.js"></script>
+		
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet"  type="text/css" href="css/main.css">
+		
+		<script src="https://kit.fontawesome.com/9497a339e1.js" crossorigin="anonymous"></script>
+		
+		<title>Izvestaj</title>
+		
+		<script>
+			$(document).ready(getInvoiceItem);
+		</script>
+	</head>
+	<body>
+	
+	<div class="containter">
+		<!-- Toolbar -->	
+			<div class="toolbar">	
+				<button id="delete" type="button" class="btn btn-outline-secondary">Obriši</button>
+			</div>
+			<!-- Toolbar END-->
+					
+		
+		
+		<table id="dataTable" class="table">
+			<thead>
+				<tr>
+					<th id="inputKolicina">Kolicina</th>
+					<th>Popust</th>
+					<th>Jedinicna cena</th>
+					<th>Osnovica pdv</th>
+					<th>Iznos pdv-a</th>
+					<th>Ukupan iznos</th>
+					<th>Faktura</th>
+					<th>Poslovna godina</th>
+					<th>Preduzece</th>
+				</tr>
+			</thead>
+			<tbody id="dataTableBody">
+			</tbody>
+		</table>
+
+        
+	<!-- DELETE  -->
+			<div class="modal fade" id="deletePromptModal" tabindex="-1" role="dialog" aria-labelledby="deletePromptLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="deletePromptLabel">Jeste li sigurni?</h5>
+			        <button type="button" class="close deletePromptClose" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        <p id="deletePromptText"></p>
+			      </div>
+			      <div class="form-group">
+					 <label for="stopaDeleteSelect">Izaberite stavku izvestaja</label>
+					 <select class="form-control"  id="stopaDeleteSelect">					    
+					 </select>
+					</div>
+			      
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary deletePromptClose">Otkaži</button>
+			        <button type="button" id="doDelete" class="btn btn-primary">Obriši</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- DELETE END -->
+	
+		
+	
+	</div>
+   
+
+	</body>
+</html>

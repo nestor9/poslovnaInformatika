@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/pricelistItem.js"></script>
+		<script src="js/functions.js"></script>
+		
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet"  type="text/css" href="css/main.css">
+		
+		<script src="https://kit.fontawesome.com/9497a339e1.js" crossorigin="anonymous"></script>
+		
+		<title>Pricelist items</title>
+		
+		<script>
+			$(document).ready(getPricelistItem);
+		</script>
+	</head>
+	<body>
+	
+	<div class="containter">
+		
+		<div class="toolbar">
+			<button id="add" type="button" class="btn btn-outline-secondary">Dodaj</button>
+			<button id="edit" type="button" class="btn btn-outline-secondary">Izmeni</button>
+			<button id="delete" type="button" class="btn btn-outline-secondary">Obriši</button>
+		</div>
+		
+		<table id="dataTable" class="table">
+			<thead>
+				<tr>
+					<th>Cena stavke</th>
+					<th>Cenovnik</th>
+					<th>Roba(usluga)</th>
+				</tr>
+			</thead>
+			<tbody id="dataTableBody">
+			</tbody>
+		</table>
+		
+		
+			<!-- ADD -->
+			<div class="modal fade" id="addModalScrollable" tabindex="-1" role="dialog" aria-labelledby="addModalScrollableTitle" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-scrollable" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="addModalScrollableTitle">Dodavanje stavke cenovnika</h5>
+			        <button type="button" class="close addModalClose" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        <form>
+					  <div class="form-group">
+					    <label for="cenaInput">Cena stavke</label>
+					    <input type="text" class="form-control" id="cenaInput" aria-describedby="cenaHelp" placeholder="Unesite cenu stavke">
+					  </div>
+					  <div class="form-group">
+					    <label for="cenovnikSelect">Cenovnik</label>
+					    <select class="form-control"  id="cenovnikSelect">
+					    
+					    </select>
+					  </div>
+					  <div class="form-group">
+					    <label for="robaSelect">Roba</label>
+					    <select class="form-control"  id="robaSelect">
+					    
+					    </select>
+					  </div>
+					</form>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary addModalClose" >Otkaži</button>
+			        <button type="button" id="doAdd" class="btn btn-primary">Sačuvaj</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- ADD END-->
+	
+			<!-- EDIT -->
+			<div class="modal fade" id="updateModalScrollable" tabindex="-1" role="dialog" aria-labelledby="updateModalScrollableTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-scrollable" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="updateModalScrollableTitle">Izmena stavke cenovnika</h5>
+							<button type="button" class="close updateModalClose" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<form>
+							<div class="form-group">
+							    <label for="stavkaEditSelect">Izaberite stavku</label>
+							    <select class="form-control"  id="stavkaEditSelect">					    
+							    </select>
+							    <button id="fillOutItemFieldsEdit">Izaberi</button>
+							  </div>
+					  			<div class="form-group">
+					    			<label for="cenaIzmeniInput">Cena stavke</label>
+					    			<input type="text" class="form-control" id="cenaIzmeniInput" aria-describedby="cenaIzmeniHelp" placeholder="Unesite cenu">
+					  			</div>
+					  			<div class="form-group">
+					    			<label for="cenovnikIzmeniSelect">Cenovnik</label>
+					    			<select class="form-control"  id="cenovnikIzmeniSelect">
+					    			</select>
+					  			</div>
+					  			<div class="form-group">
+					    			<label for="robaIzmeniSelect">Roba</label>
+					    			<select class="form-control"  id="robaIzmeniSelect">
+					    			</select>
+					  			</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary updateModalClose">Otkaži</button>
+							<button type="button" id="doUpdate" class="btn btn-primary">Sačuvaj</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- EDIT END-->
+			
+			<!-- DELETE  -->
+			<div class="modal fade" id="deletePromptModal" tabindex="-1" role="dialog" aria-labelledby="deletePromptLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="deletePromptLabel">Jeste li sigurni?</h5>
+			        <button type="button" class="close deletePromptClose" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        <p id="deletePromptText"></p>
+			      </div>
+			      <div class="form-group">
+					 <label for="stavkaDeleteSelect">Izaberite stavku</label>
+					 <select class="form-control"  id="stavkaDeleteSelect">					    
+					 </select>
+					</div>
+			      
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary deletePromptClose">Otkaži</button>
+			        <button type="button" id="doDelete" class="btn btn-primary">Obriši</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- DELETE END -->
+	</div>
+	
+	</body>
+</html>
