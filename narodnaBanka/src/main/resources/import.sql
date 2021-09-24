@@ -24,6 +24,6 @@ insert into price_list_items(price_list_item_id, price, pricelist_id, service_id
 
 insert into users(user_id, username, password, enterprise_id)values(1, "a", "a",1)
 
-insert into businessyear(id_year, date_from, date_to) values (1, "2021-01-01", "2021-12-31")
+insert into businessyear(id_year, date_from, date_to) values (1, "2021-02-02", "2021-12-31")
 
 
