@@ -3,10 +3,9 @@ package poslovnaInformatika.narodnaBanka.converters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.example.demo.dto.EnterpriseDTO;
-import com.example.demo.model.Enterprise;
-import com.example.demo.servis.CityServiceInteface;
-import com.example.demo.servis.EnterpriseServiceInterface;
+import poslovnaInformatika.narodnaBanka.dto.EnterpriseDTO;
+import poslovnaInformatika.narodnaBanka.model.Enterprise;
+import poslovnaInformatika.narodnaBanka.service.CityServiceInteface;
 
 @Component
 public class EnterpriseConverter {

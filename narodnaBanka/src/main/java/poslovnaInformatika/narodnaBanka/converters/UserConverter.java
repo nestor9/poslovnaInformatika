@@ -3,9 +3,9 @@ package poslovnaInformatika.narodnaBanka.converters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.example.demo.dto.UserDTO;
-import com.example.demo.model.User;
-import com.example.demo.servis.EnterpriseServiceInterface;
+import poslovnaInformatika.narodnaBanka.dto.UserDTO;
+import poslovnaInformatika.narodnaBanka.model.User;
+import poslovnaInformatika.narodnaBanka.service.EnterpriseServiceInterface;
 
 @Component
 public class UserConverter {

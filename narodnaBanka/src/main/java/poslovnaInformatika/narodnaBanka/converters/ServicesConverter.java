@@ -3,10 +3,10 @@ package poslovnaInformatika.narodnaBanka.converters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.example.demo.dto.ServicesDTO;
-import com.example.demo.model.Services;
-import com.example.demo.servis.ServiceGroupServiceInterface;
-import com.example.demo.servis.UnitOfMeasureServiceInterface;
+import poslovnaInformatika.narodnaBanka.dto.ServicesDTO;
+import poslovnaInformatika.narodnaBanka.model.Services;
+import poslovnaInformatika.narodnaBanka.service.ServiceGroupServiceInterface;
+import poslovnaInformatika.narodnaBanka.service.UnitOfMeasureServiceInterface;
 
 @Component
 public class ServicesConverter {

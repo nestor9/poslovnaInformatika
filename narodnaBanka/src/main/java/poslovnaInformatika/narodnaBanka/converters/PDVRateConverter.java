@@ -3,9 +3,9 @@ package poslovnaInformatika.narodnaBanka.converters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.example.demo.dto.PDVRateDTO;
-import com.example.demo.model.PDVRate;
-import com.example.demo.servis.PDVCategoryServiceInterface;
+import poslovnaInformatika.narodnaBanka.dto.PDVRateDTO;
+import poslovnaInformatika.narodnaBanka.model.PDVRate;
+import poslovnaInformatika.narodnaBanka.service.PDVCategoryServiceInterface;
 
 @Component
 public class PDVRateConverter {

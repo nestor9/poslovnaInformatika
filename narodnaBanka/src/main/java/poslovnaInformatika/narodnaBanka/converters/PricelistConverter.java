@@ -2,9 +2,10 @@ package poslovnaInformatika.narodnaBanka.converters;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import com.example.demo.dto.PricelistDTO;
-import com.example.demo.model.Pricelist;
-import com.example.demo.servis.EnterpriseServiceInterface;
+
+import poslovnaInformatika.narodnaBanka.dto.PricelistDTO;
+import poslovnaInformatika.narodnaBanka.model.Pricelist;
+import poslovnaInformatika.narodnaBanka.service.EnterpriseServiceInterface;
 
 @Component
 public class PricelistConverter {

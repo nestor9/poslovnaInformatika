@@ -3,8 +3,8 @@ package poslovnaInformatika.narodnaBanka.converters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.example.demo.dto.PDVCategoryDTO;
-import com.example.demo.model.PDVCategory;
+import poslovnaInformatika.narodnaBanka.dto.PDVCategoryDTO;
+import poslovnaInformatika.narodnaBanka.model.PDVCategory;
 
 @Component
 public class PDVCategoryConverter {

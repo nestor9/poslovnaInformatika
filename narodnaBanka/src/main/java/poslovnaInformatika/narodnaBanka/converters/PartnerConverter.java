@@ -2,10 +2,11 @@ package poslovnaInformatika.narodnaBanka.converters;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import com.example.demo.dto.PartnerDTO;
-import com.example.demo.model.Partner;
-import com.example.demo.servis.CityServiceInteface;
-import com.example.demo.servis.EnterpriseServiceInterface;
+
+import poslovnaInformatika.narodnaBanka.dto.PartnerDTO;
+import poslovnaInformatika.narodnaBanka.model.Partner;
+import poslovnaInformatika.narodnaBanka.service.CityServiceInteface;
+import poslovnaInformatika.narodnaBanka.service.EnterpriseServiceInterface;
 
 @Component
 public class PartnerConverter {

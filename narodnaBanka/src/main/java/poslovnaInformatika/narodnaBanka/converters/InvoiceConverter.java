@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 import poslovnaInformatika.narodnaBanka.dto.InvoiceDTO;
 import poslovnaInformatika.narodnaBanka.model.Invoice;
+import poslovnaInformatika.narodnaBanka.service.EnterpriseServiceInterface;
 
 @Component
 public class InvoiceConverter {

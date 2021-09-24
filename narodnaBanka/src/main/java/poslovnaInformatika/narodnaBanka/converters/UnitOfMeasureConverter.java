@@ -3,8 +3,8 @@ package poslovnaInformatika.narodnaBanka.converters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.example.demo.dto.UnitOfMeasureDTO;
-import com.example.demo.model.UnitOfMeasure;
+import poslovnaInformatika.narodnaBanka.dto.UnitOfMeasureDTO;
+import poslovnaInformatika.narodnaBanka.model.UnitOfMeasure;
 
 @Component
 public class UnitOfMeasureConverter {
